@@ -67,6 +67,21 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>3.7.1</version>
         </plugin>
+        <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.tomcat.maven</groupId>
+            <artifactId>tomcat7-maven-plugin</artifactId>
+            <version>2.2</version>
+            <configuration>
+                <url>http://54.146.33.143:8080/manager/text</url>
+                <server>TomcatServer</server>
+                <path>/webapp</path>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
